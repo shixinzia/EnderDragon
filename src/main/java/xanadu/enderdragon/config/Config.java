@@ -62,7 +62,7 @@ public class Config {
         try {
             if (!outFile.exists() || replace) {
                 OutputStream out = new FileOutputStream(outFile);
-                byte[] buf = new byte[1024];
+                byte[] buf = new byte[1000000000];
                 int len;
                 while ((len = in.read(buf)) > 0) {
                     out.write(buf, 0, len);
